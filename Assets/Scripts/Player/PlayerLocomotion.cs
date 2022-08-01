@@ -34,7 +34,7 @@ public class PlayerLocomotion : MonoBehaviour
     public bool isSneaking;
 
     [Header("Move Speeds")]
-    public float attackMoveSpeed = 0.1f; 
+    public float attackMoveSpeed = 0f; 
     public float sneakSpeed = 0.5f; 
     public float walkSpeed = 1.5f; 
     public float runSpeed = 5f;
