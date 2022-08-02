@@ -33,7 +33,7 @@ public class PlayAudio : MonoBehaviour
 
     public void StepAudio()
     {
-        if (playerLocomotion.isGrounded == false || player.clip == punch || player.clip == land)
+        if (playerLocomotion.isGrounded == false || player.clip == punch || player.clip == land || player.clip == jump)
             return; 
         player.clip = step;
         player.Play();
