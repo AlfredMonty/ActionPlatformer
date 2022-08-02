@@ -3393,7 +3393,7 @@ GameObject:
   - component: {fileID: 833170875}
   - component: {fileID: 833170874}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,7 +3471,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833170873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3826,7 +3826,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.09404969, y: -0.000000017657324, z: 0.0000000016675891, w: 0.9955675}
+  m_LocalRotation: {x: 0.09404969, y: -0.00000001765732, z: 0.0000000016675883, w: 0.9955675}
   m_LocalPosition: {x: 0, y: 4.1, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5325,7 +5325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434491472}
-  m_LocalRotation: {x: 0.09404969, y: -0.000000017657321, z: 0.0000000016680594, w: 0.9955675}
+  m_LocalRotation: {x: 0.09404969, y: -0.000000017657314, z: 0.0000000016680587, w: 0.9955675}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5881,7 +5881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573050299}
-  m_LocalRotation: {x: 0.0827481, y: -1e-45, z: -0, w: 0.9965705}
+  m_LocalRotation: {x: 0.0827481, y: -0, z: -0, w: 0.9965705}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

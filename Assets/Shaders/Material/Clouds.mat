@@ -53,12 +53,12 @@ Material:
     - _BUILTIN_QueueOffset: 0
     - _Blend: 0
     - _CastShadows: 1
-    - _CloudsAlpha: 2.28
-    - _CloudsPower: -0.24
-    - _CloudsScale: 2
+    - _CloudsAlpha: 1
+    - _CloudsPower: 1
+    - _CloudsScale: 100
     - _Cull: 0
-    - _DistortScale: 51.35
-    - _DistortSpeed: 0.02
+    - _DistortScale: 1
+    - _DistortSpeed: 2
     - _DstBlend: 0
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -71,7 +71,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _CloudSpeed: {r: 0.005, g: 0.0005, b: 0, a: 0}
-    - _CloudsColor: {r: 4.1337385, g: 4.969244, b: 6.793431, a: 0.39215687}
+    - _CloudsColor: {r: 16.327234, g: 22.716152, b: 135.58704, a: 0.39215687}
   m_BuildTextureStacks: []
 --- !u!114 &2325394304256704624
 MonoBehaviour:
