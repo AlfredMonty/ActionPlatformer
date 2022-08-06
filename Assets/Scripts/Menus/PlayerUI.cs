@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem; 
 
 public class PlayerUI : MonoBehaviour
 {
     public InputManager inputManager;
-    public PlayerLocomotion playerLocomotion; 
+    public PlayerLocomotion playerLocomotion;
+    public EnemyController enemyController;
 
     public float playerMaxHP = 100f;
     public float playerCurrentHP = 100f;
@@ -24,7 +24,8 @@ public class PlayerUI : MonoBehaviour
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
-        playerLocomotion = GetComponent<PlayerLocomotion>(); 
+        playerLocomotion = GetComponent<PlayerLocomotion>();
+        enemyController = GetComponent<EnemyController>();
     }
     void Update()
     {
@@ -33,8 +34,15 @@ public class PlayerUI : MonoBehaviour
         healthBar.value = fillValueHP;
         stamBar.value = fillValueStam; 
         HealthCap();
+        HealthDrain(); 
         StaminaCap();
-        StamDrain(); 
+        StamDrain();
+    }
+
+    public void HealthDrain()
+    {
+        playerLocomotion.TakeDmg();
+        print(playerCurrentHP);
     }
 
     //Stam Drain while sprinting
@@ -55,7 +63,6 @@ public class PlayerUI : MonoBehaviour
             playerCurrentStam += 0.1f;
         }
     }
-
     //Current HP can't go over Max HP// Neither can be negative
     public void HealthCap()
     {
