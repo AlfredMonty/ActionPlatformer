@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerUI : MonoBehaviour
 {
     public InputManager inputManager;
-    public PlayerLocomotion playerLocomotion;
+    public PlayerManager playerManager;
     public EnemyController enemyController;
 
     public float playerMaxHP = 100f;
@@ -24,7 +24,7 @@ public class PlayerUI : MonoBehaviour
     private void Awake()
     {
         inputManager = GetComponent<InputManager>();
-        playerLocomotion = GetComponent<PlayerLocomotion>();
+        playerManager = GetComponent<PlayerManager>();
         enemyController = GetComponent<EnemyController>();
     }
     void Update()
@@ -41,7 +41,7 @@ public class PlayerUI : MonoBehaviour
 
     public void HealthDrain()
     {
-        playerLocomotion.TakeDmg();
+        //playerLo.TakeDmg();
         print(playerCurrentHP);
     }
 

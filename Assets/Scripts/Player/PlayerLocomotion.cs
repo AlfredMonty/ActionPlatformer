@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
 
 public class PlayerLocomotion : MonoBehaviour
 {
@@ -9,12 +8,11 @@ public class PlayerLocomotion : MonoBehaviour
     AnimatorManager animatorManager; 
     InputManager inputManager;
     PlayerManager playerManager;
-    PlayerUI playerUI;
+    PlayerUI playerUI; 
 
     public Vector3 moveDir;
     Transform cameraObject;
     Rigidbody rb;
-    public LayerMask enemyLayer;
 
     [Header("Attack Types")]
     public bool isAttackRight;
@@ -70,8 +68,8 @@ public class PlayerLocomotion : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         inputManager = GetComponent<InputManager>();
         rb = GetComponent<Rigidbody>();
-        cameraObject = Camera.main.transform;
         playerUI = GetComponent<PlayerUI>(); 
+        cameraObject = Camera.main.transform;
     }
     #endregion
 
@@ -162,7 +160,7 @@ public class PlayerLocomotion : MonoBehaviour
         {
             if (!isGrounded && !playerManager.isInteracting)
             {
-                animatorManager.PlayTargetAnim("Landing", true); 
+                animatorManager.PlayTargetAnim("Landing", true);
             }
             inAirTimer = 0f;
             isGrounded = true;
@@ -172,20 +170,6 @@ public class PlayerLocomotion : MonoBehaviour
         {
             isGrounded = false; 
         }
-    }
-
-    public void TakeDmg()
-    {
-        RaycastHit hit;
-        Vector3 rayCastOrigin = transform.position;
-
-        if (Physics.SphereCast(rayCastOrigin, 0.2f, Vector3.forward, out hit, enemyLayer))
-        {
-            print("DMG");
-            playerUI.playerCurrentHP -= 1f * Time.deltaTime;
-        }
-        else
-            print("Sucks");
     }
 
     //Jumping w/ animation
